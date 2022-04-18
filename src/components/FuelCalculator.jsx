@@ -32,11 +32,11 @@ const FuelCalculator = () => {
           />
         </DistanceLabel>
         <FuelLabel>
-          <h3>Fuel consumption of vehicle</h3>
+          <h3>Fuel consumption of vehicle per 100km</h3>
           <input
             value={fuelConsumption}
             type="number"
-            placeholder="Fuel consumption of vehicle"
+            placeholder="Fuel consumption of vehicle per 100km"
             required="true"
             onChange={(e) => setFuelConsumption(e.target.value)}
           />
