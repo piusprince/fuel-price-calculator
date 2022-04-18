@@ -12,21 +12,21 @@ const FuelCalculator = () => {
     e.preventDefault();
 
     fuelCost =
-      (parseInt(distance) / parseInt(fuelConsumption)) *
-      parseInt(pricePerLitre) *
-      100;
-    setFuelCost(fuelCost);
+      (parseFloat(distance) / 100) *
+      parseFloat(fuelConsumption) *
+      parseFloat(pricePerLitre);
+    setFuelCost(fuelCost.toFixed(2));
   };
 
   return (
     <Wrapper>
       <InputsWrapper onSubmit={handleSubmit}>
         <DistanceLabel>
-          <h3>Distance of trip</h3>
+          <h3>Distance of trip in kilometers</h3>
           <input
             value={distance}
             type="number"
-            placeholder="Distance in km"
+            placeholder="Distance in kilometers"
             required="true"
             onChange={(e) => setDistance(e.target.value)}
           />
